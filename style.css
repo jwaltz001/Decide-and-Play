@@ -1,0 +1,299 @@
+/* ========================General Formatting===================== */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Cinzel', serif;
+  background: lightgrey;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+button:hover {
+  background: black;
+  color: white;
+}
+button:focus {
+  outline: none;
+}
+input:focus {
+  outline: none;
+}
+/* ========================Header===================== */
+header {
+  height: 15em;
+  display: flex;
+  flex-flow: column;
+  justify-content: flex-start;
+  align-items: center;
+  border-bottom: 1pt solid grey;
+  color: white;
+  font-weight: 700;
+  padding: 0;
+  background-image: url("images/header.jpeg");
+  background-position: center;
+  background-size: cover;
+}
+.header-filter {
+  background: rgba(0,0,0,.3);
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+}
+.header-filter > h1{
+  font-size: 50pt;
+}
+header h1, h3 {
+  margin: 0;
+}
+.logo {
+  font-weight: 900;
+  margin: 0 1.5em 1em 1.5em;
+}
+/* ========================Main Section of App===================== */
+main {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  padding: 1em;
+}
+    /* ==============Search for Games===============*/
+.search-section {
+  width: 90%;
+  /* height: 10em; */
+  margin: 0;
+  padding: 1em;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+}
+.about-tab {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+}
+.about-tab h3 {
+  text-align: center;
+}
+.about-tab p {
+  display: none;
+  font-family: 'Darker Grotesque', sans-serif;
+  font-size: 15pt;
+  border-top: 1pt solid black;
+  border-bottom: 1pt solid black;
+}
+
+/* used how to on w3schools for arrow https://www.w3schools.com/howto/howto_css_arrows.asp */
+.down-arrow {
+  border: solid black;
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding: 7px;
+  transform: rotate(45deg);
+  transition-duration: 1s;
+}
+.arrow-down-btn:hover {
+  animation-name: arrow-pulse;
+  animation-duration: 1s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+@keyframes arrow-pulse{
+  0% {transform: scale(1);}
+  50% {transform: scale(1.15);}
+  100% {transform: scale(1);}
+}
+.upside-down-arrow {
+  transform: rotate(225deg);
+  transition-duration: 1s;
+}
+.search-bar {
+  margin: 1em 0;
+}
+input {
+  font-size: 15pt;
+  font-family: 'Cinzel', serif;
+}
+#search-btn {
+  border: 1pt solid black;
+  background: transparent;
+  padding: .25em;
+}
+.results-display button {
+  border: 1pt solid grey;
+  padding: .25em;
+  margin: .25em;
+  font-size: 14pt;
+}
+#search-btn:hover {
+  background: black;
+  color: white;
+}
+
+  /* ==============Games to compare/Display===============*/
+.game-display-area {
+  width: 98%;
+  min-height: 400px;
+  height: auto;
+  background: firebrick;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  border-radius: 7pt;
+  border-top: 5pt solid black;
+  border-bottom: 5pt solid black;
+}
+.display-card-container {
+  width: 90%;
+  height: auto;
+  display: none;
+  margin: 2em 1em;
+}
+.display-cards {
+  width: 100%;
+  height: 40em;
+  text-align: center;
+  border: 2pt solid black;
+  border-radius: 7pt;
+  box-shadow: 5px 0;
+  background: white;
+}
+.display-cards > img {
+  width: auto;
+  height: 30%;
+}
+dt {
+  font-weight: 700;
+}
+dd {
+  text-align: left;
+  font-family: 'Darker Grotesque', sans-serif;
+  font-size: 15pt;
+}
+.display-cards button {
+  border: 1pt solid grey;
+  padding: .25em;
+  margin: .25em;
+  font-size: 14pt;
+}
+.game-descriptions {
+  height: 5em;
+  overflow-y: scroll;
+  margin-right: 2em;
+}
+    /* =======Random Selector======== */
+.random-selector {
+  margin-bottom: 2em;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.randomizer-button {
+  width: 7em;
+  padding: .5em;
+}
+.randomizer-button:hover {
+  outline: 2pt solid black;
+  background: white;
+  transition: background .5s;
+}
+#dice-roll-img {
+  width: 6.5em;
+  height: auto;
+}
+.clicked-random {
+  animation-name: dice-animation;
+  animation-duration: 6s;
+  /* animation-timing-function: linear; */
+}
+@keyframes dice-animation{
+  0% {transform: scale(1);}
+  50% {transform: translate(0, -300px) scale(3);}
+  100% {transform: translate(0, -600px) scale(5) rotate(1600deg);}
+}
+
+/* animate to spin out */
+/* ========================Modals===================== */
+  /* =======More Info====== */
+#more-info-display {
+  transition: height 3s;
+}
+#info-modal-textbox {
+  box-shadow: 5px 0;
+  background: white;
+  width: 90%;
+  padding: 1em;
+  height: auto;
+  display: none;
+}
+#info-header{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#info-header h1 {
+  margin-right: 2em;
+}
+#vids-dd {
+  display: flex;
+  flex-flow: wrap;
+  align-items: flex-end;
+}
+.info-video-div {
+  display: flex;
+  flex-flow: column wrap;
+  width:30%;
+  margin: .25em;
+}
+.info-video-div p {
+  margin-top: 0;
+}
+info-video-div iframe{
+  width: 100%
+}
+/* ================winner-modal================== */
+#winner-modal {
+  background: rgba(0, 0, 0, .4);
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 1;
+  overflow: auto;
+  display: none;
+}
+#winner-modal-textbox {
+  margin: 200px auto;
+  box-shadow: 5px 0;
+  background: white;
+  width: 90%;
+  padding: 1em;
+  border-radius: 7pt;
+}
+/* ========================Footer===================== */
+footer {
+  border-top: 1pt solid grey;
+  background: white;
+  height: auto;
+}
+footer h5 {
+  margin: 0 auto;
+  padding: 2em;
+  width: 20%;
+}
+footer a:hover{
+  text-decoration: underline;
+}
+/*================= media break point==================== */
+
+@media (min-width: 600px) {
+  .display-card-container {
+    width: 46%;
+ }

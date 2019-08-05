@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+<!-- SCRIPTS -->
+    <script
+  src="https://code.jquery.com/jquery-3.4.1.min.js"
+  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+  crossorigin="anonymous"></script>
+  <script src="app.js" charset="utf-8"></script>
+<!-- STYLES -->
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css?family=Cinzel:400,700,900|Darker+Grotesque:400,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css">
+    <title>D&P</title>
+  </head>
+  <body>
+<!-- Header with Title & LOGO-->
+    <header>
+      <div class="header-filter">
+      <nav>
+        <h1 class="logo">D&P</h1>
+      </nav>
+        <h1>Decide & Play</h1>
+        <h3>Less time choosing, more time gaming</h3>
+      </div>
+    </header>
+<!-- Body of Site -->
+    <main>
+
+  <!--About, Search, and Game Selection -->
+      <section class="search-section">
+        <div class="about-tab">
+          <h3>About</h3>
+          <p id="about-text">Welcome to Decide & Play!<br>D&P was made to help you compare and decide between board games.<br> Simply enter the name of a board game into the search bar below, and then select the game you want from the results. Repeat for as many games as you'd like to compare.<br>Key statistics are displayed for each game with more information about each game also available, as well as random "choose for me" to help you decide and then... play!</p>
+        </div>
+        <div class="arrow-down-btn">
+          <i class="down-arrow" id="about-tab-arrow"></i>
+        </div>
+        <div class="search-bar">
+          <form class="search-form" action="index.html" method="post">
+            <input type="text" id="search-input" value="" placeholder="Enter game title">
+            <input type="submit" value="Find" id="search-btn">
+          </form>
+        </div>
+        <div class="results-display">
+        </div>
+      </section>
+
+  <!-- More info selection -->
+      <div id="more-info-display">
+      </div>
+  <!-- Game Details Display -->
+      <section class="game-display-area">
+      </section>
+    <!-- Random Selector Button -->
+      <section class="random-selector">
+          <h2>Still can't decide?</h2>
+          <div class="randomizer-button">
+            <img class = "" id="dice-roll-img" src="images/dice.png" alt="">
+            <h3>Choose for me</h3>
+          </div>
+      </section>
+    </main>
+    <!-- More Info Box -->
+      <div class = "display-cards" id="info-modal-textbox">
+        <div id="info-header">
+          <h1 id = "info-title"></h1>
+          <img id="info-image" src="" alt="" title="">
+        </div>
+        <dl>
+          <dt>Description</dt>
+          <dd id="info-description"></dd>
+
+          <dt>Game Website</dt>
+          <dd><a id="info-website" href="" target="_blank">Visit Official Website</a> </dd>
+
+          <dt>Rules</dt>
+          <dd><a href="" id="info-rules" target="_blank">Check out the Rules</a></dd>
+
+          <dt>Videos</dt>
+          <dd id="vids-dd">
+            <div class="info-video-div">
+              <p></p>
+              <iframe id="info-video0" src="" width="" height="" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <div class="info-video-div">
+              <p></p>
+              <iframe id="info-video1" src="" width="" height="" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <div class="info-video-div">
+              <p></p>
+              <iframe id="info-video2" src="" width="" height="" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+          </dd>
+        </dl>
+        <button id="info-close">Close</button>
+      </div>
+<!-- Footer -->
+    <footer>
+      <h5>Developed by <a href="#" target= "_blank">Justin Waltz</a></h5>
+    </footer>
+  </body>
+</html>
